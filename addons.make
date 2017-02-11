@@ -1,0 +1,10 @@
+ofxXmlSettings
+ofxAudioAnalyzer
+ofxBeatDetector
+ofxDelaunay
+ofxFft
+ofxPd
+ofxOsc
+ofxMidi
+ofxUI
+ofxAbletonLive
