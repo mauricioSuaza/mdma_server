@@ -1,6 +1,5 @@
 #include "ofApp.h"
 
-//GONORREEEAAAAAAAAAAAAAA
 //--------------------------------------------------------------
 void ofApp::setup(){
     
@@ -43,14 +42,16 @@ void ofApp::setup(){
     pdObject.subscribe("TriggerCymbal");
     pdObject.subscribe("TriggerPerc");
     
+
+    
     pdObject.subscribe("pos");
 
     
     pdObject.addReceiver(*this);   // automatically receives from all subscribed sources
     
+   
+    patch = pdObject.openPatch("patchesPd/1Secuencer.pd");
     pdObject.start();
-    patch = pdObject.openPatch("patchesPd/mdma2.pd");
-    
    
    
     //Setup Midi
@@ -343,7 +344,7 @@ void ofApp::onMessageReceived(ofxOscMessage &msg)
 
 void ofApp::receiveFloat(const std::string& dest, float value) {
     
-  //  cout << "OF: float " << dest << ": " << value << endl;
+    cout << "OF: float " << dest << ": " << value << endl;
 }
 
 //--------------------------------------------------------------

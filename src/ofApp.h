@@ -19,7 +19,6 @@ const int port = 50000;
 using namespace pd;
 
 
-
 class ofApp : public ofBaseApp, public PdReceiver{
 
 	public:
